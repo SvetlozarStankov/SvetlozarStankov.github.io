@@ -1,0 +1,845 @@
+﻿<krpano version="1.23" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="openstreetmaps"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+	
+
+	
+	<scene name="scene_cam01_vraydenoiser_0000" title="CAM01.VRayDenoiser.0000" onstart="" thumburl="panos/CAM01_VRayDenoiser_0000.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0000.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0000.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967935898" style="skin_hotspotstyle" ath="17.647" atv="7.914" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0001" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0001" title="CAM01.VRayDenoiser.0001" onstart="" thumburl="panos/CAM01_VRayDenoiser_0001.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0001.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0001.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967936101" style="skin_hotspotstyle" ath="-161.157" atv="7.661" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0000" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967936278" style="skin_hotspotstyle" ath="-8.31" atv="10.442" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0002" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0002" title="CAM01.VRayDenoiser.0002" onstart="" thumburl="panos/CAM01_VRayDenoiser_0002.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0002.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0002.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967936410" style="skin_hotspotstyle" ath="167.622" atv="7.232" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0001" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967936682" style="skin_hotspotstyle" ath="-26.305" atv="8.24" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0003" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0003" title="CAM01.VRayDenoiser.0003" onstart="" thumburl="panos/CAM01_VRayDenoiser_0003.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0003.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0003.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+
+		<hotspot name="spot1967936822" style="skin_hotspotstyle" ath="156.84" atv="6.722" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0002" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967936965" style="skin_hotspotstyle" ath="14.277" atv="8.511" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0004" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971092432" style="skin_hotspotstyle" ath="-77.769" atv="-37.604" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971092558" style="skin_hotspotstyle" ath="-46.359" atv="-30.909" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0004" title="CAM01.VRayDenoiser.0004" onstart="" thumburl="panos/CAM01_VRayDenoiser_0004.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0004.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0004.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967937187" style="skin_hotspotstyle" ath="7.812" atv="5.675" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967937328" style="skin_hotspotstyle" ath="50.157" atv="10.459" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0029" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968498815" style="skin_hotspotstyle" ath="-157.273" atv="19.975" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0003" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0005" title="CAM01.VRayDenoiser.0005" onstart="" thumburl="panos/CAM01_VRayDenoiser_0005.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0005.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0005.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967976791" style="skin_hotspotstyle" ath="9.636" atv="6.215" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967976907" style="skin_hotspotstyle" ath="-168.953" atv="5.267" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0004" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967977411" style="skin_hotspotstyle" ath="32.392" atv="11.144" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967977715" style="skin_hotspotstyle" ath="147.072" atv="7.997" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0029" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095538" style="skin_hotspotstyle" ath="-117.207" atv="-31.705" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095642" style="skin_hotspotstyle" ath="-97.31" atv="-34.579" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0006" title="CAM01.VRayDenoiser.0006" onstart="" thumburl="panos/CAM01_VRayDenoiser_0006.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0006.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0006.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967978038" style="skin_hotspotstyle" ath="-10.419" atv="6.131" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967978237" style="skin_hotspotstyle" ath="-171.608" atv="6.719" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967978402" style="skin_hotspotstyle" ath="163.588" atv="12.963" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967978595" style="skin_hotspotstyle" ath="55.171" atv="12.634" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095746" style="skin_hotspotstyle" ath="-112.268" atv="-30.819" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095830" style="skin_hotspotstyle" ath="-90.426" atv="-33.204" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0007" title="CAM01.VRayDenoiser.0007" onstart="" thumburl="panos/CAM01_VRayDenoiser_0007.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0007.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0007.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967978864" style="skin_hotspotstyle" ath="-36.51" atv="7.093" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0008" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967979005" style="skin_hotspotstyle" ath="162.566" atv="7.959" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967979204" style="skin_hotspotstyle" ath="136.27" atv="7.94" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967979501" style="skin_hotspotstyle" ath="31.643" atv="8.872" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0009" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967979600" style="skin_hotspotstyle" ath="65.859" atv="3.68" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0010" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0008" title="CAM01.VRayDenoiser.0008" onstart="" thumburl="panos/CAM01_VRayDenoiser_0008.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0008.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0008.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967979741" style="skin_hotspotstyle" ath="101.222" atv="7.275" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0009" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967979804" style="skin_hotspotstyle" ath="136.452" atv="6.956" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0007" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0009" title="CAM01.VRayDenoiser.0009" onstart="" thumburl="panos/CAM01_VRayDenoiser_0009.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0009.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0009.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967979967" style="skin_hotspotstyle" ath="-76.977" atv="6.69" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0008" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967980044" style="skin_hotspotstyle" ath="-144.929" atv="11.662" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967980281" style="skin_hotspotstyle" ath="134.693" atv="2.157" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0033" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967981320" style="skin_hotspotstyle" ath="94.984" atv="9.262" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0010" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967982435" style="skin_hotspotstyle" ath="173.695" atv="4.491" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0010" title="CAM01.VRayDenoiser.0010" onstart="" thumburl="panos/CAM01_VRayDenoiser_0010.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0010.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0010.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967982695" style="skin_hotspotstyle" ath="179.401" atv="6.074" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0033" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967982783" style="skin_hotspotstyle" ath="163.159" atv="1.936" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967983008" style="skin_hotspotstyle" ath="-153.696" atv="2.468" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967983105" style="skin_hotspotstyle" ath="-85.931" atv="6.53" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0009" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967983453" style="skin_hotspotstyle" ath="86.045" atv="4.253" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0011" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096042" style="skin_hotspotstyle" ath="-133.26" atv="-20.252" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0011" title="CAM01.VRayDenoiser.0011" onstart="" thumburl="panos/CAM01_VRayDenoiser_0011.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0011.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0011.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967983616" style="skin_hotspotstyle" ath="91.375" atv="5.005" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0012" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967983714" style="skin_hotspotstyle" ath="-98.578" atv="7.148" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0010" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967983804" style="skin_hotspotstyle" ath="130.419" atv="1.584" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0012" title="CAM01.VRayDenoiser.0012" onstart="" thumburl="panos/CAM01_VRayDenoiser_0012.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0012.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0012.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967983934" style="skin_hotspotstyle" ath="164.449" atv="4.177" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967984087" style="skin_hotspotstyle" ath="105.71" atv="6.352" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0013" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967984167" style="skin_hotspotstyle" ath="-88.472" atv="5.729" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0011" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0013" title="CAM01.VRayDenoiser.0013" onstart="" thumburl="panos/CAM01_VRayDenoiser_0013.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0013.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967984568" style="skin_hotspotstyle" ath="-78.732" atv="6.984" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0012" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967984640" style="skin_hotspotstyle" ath="-136.337" atv="3.87" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967984787" style="skin_hotspotstyle" ath="99.47" atv="9.588" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0014" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971099807" style="skin_hotspotstyle" ath="-111.259" atv="-15.351" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0014" title="CAM01.VRayDenoiser.0014" onstart="" thumburl="panos/CAM01_VRayDenoiser_0014.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0014.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0014.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967985218" style="skin_hotspotstyle" ath="-172.823" atv="3.909" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0015" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985272" style="skin_hotspotstyle" ath="-100.699" atv="2.243" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985380" style="skin_hotspotstyle" ath="-41.318" atv="6.808" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0013" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971099684" style="skin_hotspotstyle" ath="-104.319" atv="-14.206" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0015" title="CAM01.VRayDenoiser.0015" onstart="" thumburl="panos/CAM01_VRayDenoiser_0015.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0015.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0015.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967985484" style="skin_hotspotstyle" ath="-62.5" atv="2.061" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985594" style="skin_hotspotstyle" ath="5.095" atv="4.853" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0014" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985667" style="skin_hotspotstyle" ath="-171.099" atv="5.771" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0016" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985760" style="skin_hotspotstyle" ath="-157.341" atv="4.218" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0017" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097835" style="skin_hotspotstyle" ath="-89.568" atv="-15.109" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0016" title="CAM01.VRayDenoiser.0016" onstart="" thumburl="panos/CAM01_VRayDenoiser_0016.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0016.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0016.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967985842" style="skin_hotspotstyle" ath="-69.638" atv="18.372" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0017" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967985904" style="skin_hotspotstyle" ath="9.202" atv="4.525" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0015" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986068" style="skin_hotspotstyle" ath="-178.436" atv="7.276" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0018" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0017" title="CAM01.VRayDenoiser.0017" onstart="" thumburl="panos/CAM01_VRayDenoiser_0017.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0017.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0017.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968009580" style="skin_hotspotstyle" ath="88.655" atv="15.515" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0016" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968009688" style="skin_hotspotstyle" ath="153.919" atv="6.592" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0018" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968009757" style="skin_hotspotstyle" ath="39.544" atv="7.539" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0015" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968009827" style="skin_hotspotstyle" ath="-24.445" atv="0.617" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0015" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0018" title="CAM01.VRayDenoiser.0018" onstart="" thumburl="panos/CAM01_VRayDenoiser_0018.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0018.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0018.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967986195" style="skin_hotspotstyle" ath="-15.667" atv="3.822" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0017" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986267" style="skin_hotspotstyle" ath="3.526" atv="4.054" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0016" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986338" style="skin_hotspotstyle" ath="-156.719" atv="4.91" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0019" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097660" style="skin_hotspotstyle" ath="-80.465" atv="-15.199" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097726" style="skin_hotspotstyle" ath="-73.578" atv="-14.976" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0019" title="CAM01.VRayDenoiser.0019" onstart="" thumburl="panos/CAM01_VRayDenoiser_0019.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0019.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0019.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967986468" style="skin_hotspotstyle" ath="-147.205" atv="7.927" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0020" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986513" style="skin_hotspotstyle" ath="21.398" atv="8.45" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0018" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0020" title="CAM01.VRayDenoiser.0020" onstart="" thumburl="panos/CAM01_VRayDenoiser_0020.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0020.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0020.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967986645" style="skin_hotspotstyle" ath="-150.546" atv="10.045" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0021" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986701" style="skin_hotspotstyle" ath="29.88" atv="6.893" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0019" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0021" title="CAM01.VRayDenoiser.0021" onstart="" thumburl="panos/CAM01_VRayDenoiser_0021.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0021.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0021.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967986880" style="skin_hotspotstyle" ath="22.152" atv="12.338" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0020" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967986956" style="skin_hotspotstyle" ath="-73.065" atv="11.707" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0022" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097443" style="skin_hotspotstyle" ath="-68.872" atv="-16.148" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097521" style="skin_hotspotstyle" ath="-61.067" atv="-15.889" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0022" title="CAM01.VRayDenoiser.0022" onstart="" thumburl="panos/CAM01_VRayDenoiser_0022.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0022.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0022.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967987146" style="skin_hotspotstyle" ath="-64.756" atv="7.044" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0023" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967987401" style="skin_hotspotstyle" ath="99.591" atv="12.183" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0021" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967987535" style="skin_hotspotstyle" ath="63.939" atv="5.876" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0020" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0023" title="CAM01.VRayDenoiser.0023" onstart="" thumburl="panos/CAM01_VRayDenoiser_0023.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0023.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0023.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967987677" style="skin_hotspotstyle" ath="-39.027" atv="5.66" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0024" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967987720" style="skin_hotspotstyle" ath="120.585" atv="11.765" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0022" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0024" title="CAM01.VRayDenoiser.0024" onstart="" thumburl="panos/CAM01_VRayDenoiser_0024.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0024.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0024.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967987852" style="skin_hotspotstyle" ath="-14.264" atv="5.988" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0025" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967987948" style="skin_hotspotstyle" ath="137.899" atv="7.977" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0023" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097131" style="skin_hotspotstyle" ath="-57.826" atv="-19.93" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971097224" style="skin_hotspotstyle" ath="-68.355" atv="-20.837" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0025" title="CAM01.VRayDenoiser.0025" onstart="" thumburl="panos/CAM01_VRayDenoiser_0025.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0025.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0025.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967988147" style="skin_hotspotstyle" ath="10.352" atv="6.38" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0026" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967988230" style="skin_hotspotstyle" ath="168.159" atv="5.951" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0024" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096770" style="skin_hotspotstyle" ath="-91.952" atv="-22.889" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096924" style="skin_hotspotstyle" ath="-66.292" atv="-21.693" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0026" title="CAM01.VRayDenoiser.0026" onstart="" thumburl="panos/CAM01_VRayDenoiser_0026.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0026.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0026.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967988488" style="skin_hotspotstyle" ath="-26.817" atv="10.616" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0027" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967988564" style="skin_hotspotstyle" ath="-169.702" atv="6.511" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0025" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096526" style="skin_hotspotstyle" ath="-100.126" atv="-22.108" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096584" style="skin_hotspotstyle" ath="-86.374" atv="-22.589" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096644" style="skin_hotspotstyle" ath="-73.507" atv="-22.377" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0027" title="CAM01.VRayDenoiser.0027" onstart="" thumburl="panos/CAM01_VRayDenoiser_0027.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0027.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0027.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967988707" style="skin_hotspotstyle" ath="-99.096" atv="11.464" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0028" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967988782" style="skin_hotspotstyle" ath="133.88" atv="9.306" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0026" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989001" style="skin_hotspotstyle" ath="3.186" atv="2.775" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989130" style="skin_hotspotstyle" ath="-36.923" atv="1.391" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096312" style="skin_hotspotstyle" ath="-106.328" atv="-23.56" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096372" style="skin_hotspotstyle" ath="-92.232" atv="-24.257" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0028" title="CAM01.VRayDenoiser.0028" onstart="" thumburl="panos/CAM01_VRayDenoiser_0028.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0028.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0028.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967989310" style="skin_hotspotstyle" ath="-125.01" atv="6.58" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0029" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989375" style="skin_hotspotstyle" ath="76.808" atv="13.353" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0027" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989496" style="skin_hotspotstyle" ath="38.039" atv="2.968" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0029" title="CAM01.VRayDenoiser.0029" onstart="" thumburl="panos/CAM01_VRayDenoiser_0029.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0029.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0029.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1967989762" style="skin_hotspotstyle" ath="-19.026" atv="8.459" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0030" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989843" style="skin_hotspotstyle" ath="-2.921" atv="3.935" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967989940" style="skin_hotspotstyle" ath="-134.367" atv="8.593" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0004" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1967990120" style="skin_hotspotstyle" ath="61.89" atv="6.58" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0028" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968002433" style="skin_hotspotstyle" ath="-33.568" atv="8.233" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0030" title="CAM01.VRayDenoiser.0030" onstart="" thumburl="panos/CAM01_VRayDenoiser_0030.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0030.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0030.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968007396" style="skin_hotspotstyle" ath="-157.479" atv="3.962" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0004" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968007523" style="skin_hotspotstyle" ath="-60.001" atv="27.328" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968007733" style="skin_hotspotstyle" ath="156.462" atv="13.727" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0029" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968007824" style="skin_hotspotstyle" ath="100.681" atv="9.315" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0028" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968007943" style="skin_hotspotstyle" ath="56.314" atv="0.371" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968008040" style="skin_hotspotstyle" ath="-3.444" atv="4.183" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968008192" style="skin_hotspotstyle" ath="14.867" atv="4.944" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0031" title="CAM01.VRayDenoiser.0031" onstart="" thumburl="panos/CAM01_VRayDenoiser_0031.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0031.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0031.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968002845" style="skin_hotspotstyle" ath="-158.425" atv="6.814" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0030" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968003060" style="skin_hotspotstyle" ath="-142.234" atv="10.297" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968003151" style="skin_hotspotstyle" ath="-21.74" atv="10.534" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968003472" style="skin_hotspotstyle" ath="75.248" atv="3.152" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968003590" style="skin_hotspotstyle" ath="11.748" atv="6.445" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0032" title="CAM01.VRayDenoiser.0032" onstart="" thumburl="panos/CAM01_VRayDenoiser_0032.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0032.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0032.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968003772" style="skin_hotspotstyle" ath="-18.355" atv="8.517" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0033" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968003850" style="skin_hotspotstyle" ath="75.967" atv="0.778" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968004110" style="skin_hotspotstyle" ath="169.544" atv="4.027" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0027" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0033" title="CAM01.VRayDenoiser.0033" onstart="" thumburl="panos/CAM01_VRayDenoiser_0033.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0033.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0033.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968004561" style="skin_hotspotstyle" ath="92.789" atv="-0.036" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968004675" style="skin_hotspotstyle" ath="153.97" atv="8.144" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968004836" style="skin_hotspotstyle" ath="-107.647" atv="8.246" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0034" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968004957" style="skin_hotspotstyle" ath="-140.271" atv="2.166" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968005070" style="skin_hotspotstyle" ath="-45.607" atv="2.165" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0009" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968005277" style="skin_hotspotstyle" ath="-4.709" atv="3.339" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0010" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968005426" style="skin_hotspotstyle" ath="45.47" atv="-0.616" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0011" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971099940" style="skin_hotspotstyle" ath="-102.34" atv="-25.078" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0034" title="CAM01.VRayDenoiser.0034" onstart="" thumburl="panos/CAM01_VRayDenoiser_0034.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0034.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0034.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968005661" style="skin_hotspotstyle" ath="-118.081" atv="17.822" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968005775" style="skin_hotspotstyle" ath="-36.977" atv="6.314" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0007" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968005964" style="skin_hotspotstyle" ath="66.276" atv="7.366" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0033" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006091" style="skin_hotspotstyle" ath="-168.677" atv="8.003" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0031" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006244" style="skin_hotspotstyle" ath="-157.08" atv="3.36" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006463" style="skin_hotspotstyle" ath="104.143" atv="2.943" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0032" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971096174" style="skin_hotspotstyle" ath="-113.703" atv="-28.09" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0035" title="CAM01.VRayDenoiser.0035" onstart="" thumburl="panos/CAM01_VRayDenoiser_0035.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0035.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0035.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1968006646" style="skin_hotspotstyle" ath="54.662" atv="1.775" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0013" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006757" style="skin_hotspotstyle" ath="-8.575" atv="3.447" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0012" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006851" style="skin_hotspotstyle" ath="-48.298" atv="-0.174" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0011" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968006966" style="skin_hotspotstyle" ath="118.548" atv="-0.196" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0015" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1968007056" style="skin_hotspotstyle" ath="154.119" atv="-1.264" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0017" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971102516" style="skin_hotspotstyle" ath="-112.623" atv="-16.643" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971102560" style="skin_hotspotstyle" ath="-104.486" atv="-17.504" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971102638" style="skin_hotspotstyle" ath="-95.831" atv="-17.911" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+<scene name="scene_cam01_vraydenoiser_0036" title="CAM01.VRayDenoiser.0036" onstart="" thumburl="panos/CAM01_VRayDenoiser_0036.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0036.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0036.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1971092962" style="skin_hotspotstyle" ath="-46.473" atv="0.202" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0037" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094233" style="skin_hotspotstyle" ath="20.312" atv="1.71" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095143" style="skin_hotspotstyle" ath="65.384" atv="9.002" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971095221" style="skin_hotspotstyle" ath="82.576" atv="8.782" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0017" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0037" title="CAM01.VRayDenoiser.0037" onstart="" thumburl="panos/CAM01_VRayDenoiser_0037.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0037.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0037.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1971093048" style="skin_hotspotstyle" ath="14.419" atv="-0.751" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094323" style="skin_hotspotstyle" ath="151.661" atv="-2.263" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0038" title="CAM01.VRayDenoiser.0038" onstart="" thumburl="panos/CAM01_VRayDenoiser_0038.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0038.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0038.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1971093667" style="skin_hotspotstyle" ath="107.961" atv="0.438" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0039" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971093721" style="skin_hotspotstyle" ath="-166.608" atv="2.036" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0037" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cam01_vraydenoiser_0039" title="CAM01.VRayDenoiser.0039" onstart="" thumburl="panos/CAM01_VRayDenoiser_0039.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/CAM01_VRayDenoiser_0039.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/CAM01_VRayDenoiser_0039.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1971093928" style="skin_hotspotstyle" ath="-160.876" atv="-0.748" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0036" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094110" style="skin_hotspotstyle" ath="-20.693" atv="-1.058" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0038" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094553" style="skin_hotspotstyle" ath="108.957" atv="28.698" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0004" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094685" style="skin_hotspotstyle" ath="75.189" atv="11.162" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0035" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094786" style="skin_hotspotstyle" ath="83.789" atv="28.357" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0005" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094900" style="skin_hotspotstyle" ath="125.848" atv="26.744" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0003" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1971094970" style="skin_hotspotstyle" ath="63.517" atv="24.612" depth="1000.0" linkedscene="scene_cam01_vraydenoiser_0006" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+<network retrycount="10" />
+
+
+</krpano>
