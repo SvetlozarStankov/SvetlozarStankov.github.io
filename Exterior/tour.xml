@@ -780,6 +780,7 @@
 		<hotspot name="spot1971094233" style="skin_hotspotstyle" ath="20.312" atv="1.71" depth="1000.0" linkedscene="scene_iconicayard39" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971095143" style="skin_hotspotstyle" ath="65.384" atv="9.002" depth="1000.0" linkedscene="scene_iconicayard35" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971095221" style="skin_hotspotstyle" ath="82.576" atv="8.782" depth="1000.0" linkedscene="scene_iconicayard17" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2016023511" style="skin_hotspotstyle" ath="-3.491" atv="-1.08" depth="1000.0" linkedscene="scene_iconicayard38" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -797,6 +798,7 @@
 
 		<hotspot name="spot1971093048" style="skin_hotspotstyle" ath="14.419" atv="-0.751" depth="1000.0" linkedscene="scene_iconicayard38" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971094323" style="skin_hotspotstyle" ath="151.661" atv="-2.263" depth="1000.0" linkedscene="scene_iconicayard36" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2016023240" style="skin_hotspotstyle" ath="80.626" atv="-0.121" depth="1000.0" linkedscene="scene_iconicayard39" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -814,6 +816,7 @@
 
 		<hotspot name="spot1971093667" style="skin_hotspotstyle" ath="107.961" atv="0.438" depth="1000.0" linkedscene="scene_iconicayard39" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971093721" style="skin_hotspotstyle" ath="-166.608" atv="2.036" depth="1000.0" linkedscene="scene_iconicayard37" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2016023685" style="skin_hotspotstyle" ath="165.541" atv="-2.412" depth="1000.0" linkedscene="scene_iconicayard36" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
@@ -836,6 +839,7 @@
 		<hotspot name="spot1971094786" style="skin_hotspotstyle" ath="83.789" atv="28.357" depth="1000.0" linkedscene="scene_iconicayard05" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971094900" style="skin_hotspotstyle" ath="125.848" atv="26.744" depth="1000.0" linkedscene="scene_iconicayard03" linkedscene_hoffset="0.0" use3dtransition="true" />
 		<hotspot name="spot1971094970" style="skin_hotspotstyle" ath="63.517" atv="24.612" depth="1000.0" linkedscene="scene_iconicayard06" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2016023107" style="skin_hotspotstyle" ath="-87.152" atv="0.437" depth="1000.0" linkedscene="scene_iconicayard37" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
