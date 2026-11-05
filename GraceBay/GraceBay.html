@@ -1,534 +1,731 @@
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-		<title>Amaris Grace Bay LXR Hotels & Resorts - Virtual Tour</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		
-		<script type="text/javascript">
-			// hide URL field on the iPhone/iPod touch
-			function hideUrlBar() {
-				var p = String(navigator.platform);
-				container = document.getElementById("container");
-				if( p === 'iPad' || p === 'iPhone' || p === 'iPod touch' ){
-					var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-					if (parseInt(v[1], 10)>=7) {
-						if (container) {
-							container.style.top=(0) + "px";
-							container.style.left=(0) + "px";
-							container.style.width=(window.innerWidth) + "px";
-							container.style.height=(window.innerHeight) + "px";
-						}
-						if (obj) {
-							obj.setViewerSize(window.innerWidth, window.innerHeight);
-						}						
-						window.scrollTo(0, 0);
-					} else {
-						if (container) {
-							var cheight;
-							switch(window.innerHeight) {
-								case 208:cheight=268; break;
-								case 260:cheight=320; break;
-								case 336:cheight=396; break;
-								case 356:cheight=416; break;
-								case 424:cheight=484; break;
-								case 444:cheight=504; break;
-								default: cheight=window.innerHeight;
-							}
-							if ((cheight) && ((container.offsetHeight!=cheight) || (window.innerHeight!=cheight))) {
-								container.style.height=cheight + "px";
-							}
-						}
-						document.getElementsByTagName("body")[0].style.marginTop="1px";
-						window.scrollTo(0, 1);
-					}
-				}
-			}
-			
-		<style type="text/css">
-			/* Welcome Screen Styles */
-			#welcome-overlay {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(255, 255, 255, 0.85);
-				z-index: 10000;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				backdrop-filter: blur(3px);
-				transition: opacity 0.4s ease, visibility 0.4s ease;
-				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-			}
-			
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Amaris Grace Bay LXR Hotels & Resorts - Virtual Tour</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<style type="text/css">
+
+		/* ==========================================
+		   WELCOME SCREEN - ORIGINAL DESIGN
+		========================================== */
+
+		#welcome-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.85);
+			z-index: 10000;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			backdrop-filter: blur(3px);
+			transition: opacity 0.4s ease, visibility 0.4s ease;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		}
+
+		.welcome-container {
+			background: white;
+			border-radius: 12px;
+			padding: 30px;
+			max-width: 500px;
+			width: 85%;
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+			position: relative;
+			text-align: center;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+		}
+
+		.welcome-header h1 {
+			color: #1a365d;
+			font-size: 1.8em;
+			margin: 0 0 15px 0;
+			font-weight: 600;
+			line-height: 1.3;
+		}
+
+		.brand-subtitle {
+			color: #718096;
+			font-size: 0.95em;
+			font-weight: 500;
+			margin-bottom: 25px;
+			display: block;
+			letter-spacing: 0.5px;
+		}
+
+		.instructions-list {
+			margin: 25px 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.instructions-list li {
+			margin-bottom: 12px;
+			color: #4a5568;
+			font-size: 1em;
+			line-height: 1.5;
+			padding-left: 24px;
+			text-align: left;
+			position: relative;
+		}
+
+		.instructions-list li:before {
+			content: "•";
+			color: #4299e1;
+			font-size: 1.5em;
+			position: absolute;
+			left: 0;
+			top: -3px;
+		}
+
+		#start-tour-btn {
+			background: #2d3748;
+			color: white;
+			border: none;
+			padding: 14px 40px;
+			font-size: 1em;
+			font-weight: 500;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			margin-top: 15px;
+			letter-spacing: 0.5px;
+		}
+
+		#start-tour-btn:hover {
+			background: #4a5568;
+			transform: translateY(-1px);
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			background: none;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 20px;
+			color: #718096;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			border: 1px solid transparent;
+		}
+
+		.close-btn:hover {
+			color: #2d3748;
+			border-color: #e2e8f0;
+			background: #f7fafc;
+		}
+
+
+		/* ==========================================
+		   HOTSPOT POPUP
+		   PDF / IMAGE / WEB LINKS
+		========================================== */
+
+		#hotspot-popup {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.85);
+			z-index: 20000;
+			justify-content: center;
+			align-items: center;
+			backdrop-filter: blur(5px);
+		}
+
+		#hotspot-popup.active {
+			display: flex;
+		}
+
+		#hotspot-popup-content {
+			position: relative;
+			width: 90%;
+			height: 90%;
+			max-width: 1400px;
+			background: white;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+		}
+
+		#hotspot-popup-frame {
+			width: 100%;
+			height: 100%;
+			border: none;
+			display: block;
+			background: white;
+		}
+
+		#hotspot-popup-close {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			background: rgba(0,0,0,0.7);
+			color: white;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			line-height: 1;
+			cursor: pointer;
+			z-index: 20002;
+			transition: all 0.2s ease;
+			border: none;
+		}
+
+		#hotspot-popup-close:hover {
+			background: rgba(0,0,0,0.9);
+			transform: scale(1.1);
+		}
+
+		#hotspot-popup-loading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #718096;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			background: rgba(255,255,255,0.95);
+			padding: 10px 20px;
+			border-radius: 20px;
+			z-index: 1;
+			pointer-events: none;
+		}
+
+
+		/* ==========================================
+		   MOBILE RESPONSIVENESS - ORIGINAL DESIGN
+		========================================== */
+
+		@media (max-width: 768px) {
+
 			.welcome-container {
-				background: white;
-				border-radius: 12px;
-				padding: 30px;
-				max-width: 500px;
-				width: 85%;
-				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-				position: relative;
-				text-align: center;
-				border: 1px solid rgba(0, 0, 0, 0.08);
+				padding: 25px 20px;
+				width: 90%;
 			}
-			
+
 			.welcome-header h1 {
-				color: #1a365d;
-				font-size: 1.8em;
-				margin: 0 0 15px 0;
-				font-weight: 600;
-				line-height: 1.3;
-			}
-			
-			.brand-subtitle {
-				color: #718096;
-				font-size: 0.95em;
-				font-weight: 500;
-				margin-bottom: 25px;
-				display: block;
-				letter-spacing: 0.5px;
-			}
-			
-			.instructions-list {
-				margin: 25px 0;
-				padding: 0;
-				list-style: none;
-			}
-			
-			.instructions-list li {
-				margin-bottom: 12px;
-				color: #4a5568;
-				font-size: 1em;
-				line-height: 1.5;
-				padding-left: 24px;
-				text-align: left;
-				position: relative;
-			}
-			
-			.instructions-list li:before {
-				content: "•";
-				color: #4299e1;
 				font-size: 1.5em;
-				position: absolute;
-				left: 0;
-				top: -3px;
 			}
-			
+
+			.instructions-list li {
+				font-size: 0.95em;
+			}
+
 			#start-tour-btn {
-				background: #2d3748;
-				color: white;
-				border: none;
-				padding: 14px 40px;
-				font-size: 1em;
-				font-weight: 500;
-				border-radius: 8px;
-				cursor: pointer;
-				transition: all 0.2s ease;
-				margin-top: 15px;
-				letter-spacing: 0.5px;
-			}
-			
-			#start-tour-btn:hover {
-				background: #4a5568;
-				transform: translateY(-1px);
-			}
-			
-			.close-btn {
-				position: absolute;
-				top: 12px;
-				right: 12px;
-				background: none;
-				width: 32px;
-				height: 32px;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 20px;
-				color: #718096;
-				cursor: pointer;
-				transition: all 0.2s ease;
-				border: 1px solid transparent;
-			}
-			
-			.close-btn:hover {
-				color: #2d3748;
-				border-color: #e2e8f0;
-				background: #f7fafc;
-			}
-			
-			/* Image Popup Styles */
-			.popup-overlay {
-				display: none;
-				position: fixed;
-				top: 0;
-				left: 0;
+				padding: 12px 30px;
 				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.85);
-				z-index: 10001;
-				justify-content: center;
-				align-items: center;
-				backdrop-filter: blur(5px);
 			}
-			
-			.popup-content {
-				position: relative;
-				max-width: 90%;
-				max-height: 90%;
-				background: white;
-				border-radius: 12px;
-				overflow: hidden;
-				box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+
+			#hotspot-popup-content {
+				width: 95%;
+				height: 95%;
+				border-radius: 8px;
 			}
-			
-			.popup-image {
-				display: block;
-				max-width: 100%;
-				max-height: 80vh;
-				width: auto;
-				height: auto;
-				margin: 0 auto;
+
+		}
+
+		@media (max-width: 480px) {
+
+			.welcome-container {
+				padding: 20px 15px;
 			}
-			
-			.popup-close {
-				position: absolute;
-				top: 12px;
-				right: 12px;
-				background: rgba(0,0,0,0.7);
-				color: white;
-				width: 36px;
-				height: 36px;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 20px;
-				cursor: pointer;
-				z-index: 2;
-				transition: all 0.2s ease;
-				border: none;
+
+			.welcome-header h1 {
+				font-size: 1.3em;
 			}
-			
-			.popup-close:hover {
-				background: rgba(0,0,0,0.9);
-				transform: scale(1.1);
+
+			.instructions-list li {
+				padding-left: 20px;
+				font-size: 0.9em;
 			}
-			
-			.popup-loading {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				color: white;
-				font-size: 16px;
-				background: rgba(0,0,0,0.7);
-				padding: 10px 20px;
-				border-radius: 20px;
-			}
-			
-			.popup-caption {
-				padding: 15px;
-				text-align: center;
-				background: white;
-				color: #333;
-				font-size: 14px;
-				max-width: 600px;
-				margin: 0 auto;
-			}
-			
-			.popup-title {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-				color: white;
-				padding: 20px;
-				margin: 0;
-				font-size: 1.2em;
-				font-weight: 500;
-			}
-			
-			/* Mobile responsiveness */
-			@media (max-width: 768px) {
-				.welcome-container {
-					padding: 25px 20px;
-					width: 90%;
+
+		}
+
+
+		/* ==========================================
+		   ORIGINAL OBJECT2VR STYLES
+		========================================== */
+
+		body, div, h1, h2, h3, span, p {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			color: #000000;
+		}
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			height: 100%;
+			margin: 0px;
+			overflow: hidden;
+			font-size: 10pt;
+			background: #ffffff;
+		}
+
+		table, tr, td {
+			font-size: 10pt;
+			border-color: #777777;
+			background: #dddddd;
+			color: #000000;
+			border-style: solid;
+			border-width: 2px;
+			padding: 5px;
+			border-collapse: collapse;
+		}
+
+		h1 {
+			font-size: 18pt;
+		}
+
+		h2 {
+			font-size: 14pt;
+		}
+
+		.warning {
+			font-weight: bold;
+		}
+
+	</style>
+
+
+	<script type="text/javascript">
+
+		/* ==========================================
+		   IPHONE URL BAR
+		========================================== */
+
+		function hideUrlBar() {
+
+			var p = String(navigator.platform);
+			var container = document.getElementById("container");
+
+			if (p === 'iPad' || p === 'iPhone' || p === 'iPod touch') {
+
+				var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+
+				if (v && parseInt(v[1], 10) >= 7) {
+
+					if (container) {
+						container.style.top = "0px";
+						container.style.left = "0px";
+						container.style.width = window.innerWidth + "px";
+						container.style.height = window.innerHeight + "px";
+					}
+
+					if (typeof obj !== 'undefined' && obj) {
+						obj.setViewerSize(window.innerWidth, window.innerHeight);
+					}
+
+					window.scrollTo(0, 0);
+
+				} else {
+
+					if (container) {
+
+						var cheight;
+
+						switch(window.innerHeight) {
+							case 208: cheight = 268; break;
+							case 260: cheight = 320; break;
+							case 336: cheight = 396; break;
+							case 356: cheight = 416; break;
+							case 424: cheight = 484; break;
+							case 444: cheight = 504; break;
+							default: cheight = window.innerHeight;
+						}
+
+						if (cheight && ((container.offsetHeight != cheight) || (window.innerHeight != cheight))) {
+							container.style.height = cheight + "px";
+						}
+
+					}
+
+					document.getElementsByTagName("body")[0].style.marginTop = "1px";
+					window.scrollTo(0, 1);
+
 				}
-				
-				.welcome-header h1 {
-					font-size: 1.5em;
-				}
-				
-				.instructions-list li {
-					font-size: 0.95em;
-				}
-				
-				#start-tour-btn {
-					padding: 12px 30px;
-					width: 100%;
-				}
-				
-				.popup-content {
-					max-width: 95%;
-					max-height: 95%;
-				}
 			}
-			
-			@media (max-width: 480px) {
-				.welcome-container {
-					padding: 20px 15px;
-				}
-				
-				.welcome-header h1 {
-					font-size: 1.3em;
-				}
-				
-				.instructions-list li {
-					padding-left: 20px;
-					font-size: 0.9em;
-				}
-			}
-			
-			/* Default styles from original */
-			body, div, h1, h2, h3, span, p {
-				font-family: Verdana,Arial,Helvetica,sans-serif;
-				color: #000000; 
-			}
-			html {
-				height: 100%;
-			}
-			body {
-				height: 100%;
-				margin: 0px;
-				overflow: hidden;
-				font-size: 10pt;
-				background: #ffffff; 
-			}
-			table,tr,td {
-				font-size: 10pt;
-				border-color: #777777;
-				background: #dddddd; 
-				color: #000000; 
-				border-style: solid;
-				border-width: 2px;
-				padding: 5px;
-				border-collapse: collapse;
-			}
-			h1 {
-				font-size: 18pt;
-			}
-			h2 {
-				font-size: 14pt;
-			}
-			.warning { 
-				font-weight: bold;
-			}
-		</style>
-		
-		<script type="text/javascript">
-			// Function to close welcome screen
-			function closeWelcomeScreen() {
-				var overlay = document.getElementById('welcome-overlay');
+		}
+
+
+		/* ==========================================
+		   WELCOME SCREEN
+		========================================== */
+
+		function closeWelcomeScreen() {
+
+			var overlay = document.getElementById('welcome-overlay');
+
+			if (overlay) {
 				overlay.style.opacity = '0';
 				overlay.style.visibility = 'hidden';
 				overlay.setAttribute('aria-hidden', 'true');
-				document.getElementById('container').focus();
 			}
-			
-			// Initialize Popup functionality
-			function initPopup() {
-				// Create popup HTML structure
-				var popupHTML = `
-					<div class="popup-overlay" id="imagePopup">
-						<div class="popup-close" id="popupClose">&times;</div>
-						<div class="popup-content" id="popupContent">
-							<div class="popup-loading" id="popupLoading">Loading image...</div>
-							<img class="popup-image" id="popupImage" style="display:none;">
-							<div class="popup-caption" id="popupCaption" style="display:none;"></div>
-							<h3 class="popup-title" id="popupTitle" style="display:none;"></h3>
-						</div>
-					</div>
-				`;
-				
-				// Add popup to body
-				document.body.insertAdjacentHTML('beforeend', popupHTML);
-				
-				// Get popup elements
-				var popup = document.getElementById('imagePopup');
-				var popupClose = document.getElementById('popupClose');
-				var popupImage = document.getElementById('popupImage');
-				var popupCaption = document.getElementById('popupCaption');
-				var popupLoading = document.getElementById('popupLoading');
-				var popupTitle = document.getElementById('popupTitle');
-				
-				// Close popup when clicking X or outside image
-				popupClose.addEventListener('click', closeImagePopup);
-				popup.addEventListener('click', function(e) {
-					if (e.target === popup) {
-						closeImagePopup();
-					}
-				});
-				
-				// Function to open popup with image
-				window.openImagePopup = function(imageUrl, caption, title) {
-					// Show loading and hide image
-					popupLoading.style.display = 'block';
-					popupImage.style.display = 'none';
-					popupCaption.style.display = 'none';
-					popupTitle.style.display = 'none';
-					
-					// Show popup
-					popup.style.display = 'flex';
-					
-					// Load image
-					popupImage.onload = function() {
-						popupLoading.style.display = 'none';
-						popupImage.style.display = 'block';
-						if (caption) {
-							popupCaption.innerHTML = caption;
-							popupCaption.style.display = 'block';
-						}
-						if (title) {
-							popupTitle.innerHTML = title;
-							popupTitle.style.display = 'block';
-						}
-						// Prevent body scrolling when popup is open
-						document.body.style.overflow = 'hidden';
-					};
-					
-					popupImage.onerror = function() {
-						popupLoading.innerHTML = 'Error loading image';
-					};
-					
-					popupImage.src = imageUrl;
-				};
-				
-				// Function to close popup
-				function closeImagePopup() {
-					popup.style.display = 'none';
-					popupImage.src = '';
-					// Restore body scrolling
-					document.body.style.overflow = '';
+
+			var container = document.getElementById('container');
+
+			if (container) {
+				container.focus();
+			}
+		}
+
+
+		/* ==========================================
+		   UNIVERSAL HOTSPOT POPUP
+		   PDF / IMAGE / WEB LINKS
+		========================================== */
+
+		var hotspotPopupInitialized = false;
+
+		function initHotspotPopup() {
+
+			if (hotspotPopupInitialized) return;
+
+			hotspotPopupInitialized = true;
+
+			var popupHTML =
+				'<div id="hotspot-popup">' +
+					'<div id="hotspot-popup-content">' +
+						'<div id="hotspot-popup-loading">Loading...</div>' +
+						'<iframe id="hotspot-popup-frame" title="Hotspot content"></iframe>' +
+						'<button id="hotspot-popup-close" type="button" aria-label="Close popup">&times;</button>' +
+					'</div>' +
+				'</div>';
+
+			document.body.insertAdjacentHTML('beforeend', popupHTML);
+
+			var popup = document.getElementById('hotspot-popup');
+			var frame = document.getElementById('hotspot-popup-frame');
+			var closeButton = document.getElementById('hotspot-popup-close');
+			var loading = document.getElementById('hotspot-popup-loading');
+
+
+			/* OPEN POPUP */
+
+			window.openHotspotPopup = function(url) {
+
+				if (!url || url === 'about:blank') return;
+
+				try {
+					url = new URL(url, window.location.href).href;
+				} catch(e) {
+					return;
 				}
-				
-				// Override window.open for hotspot links
-				var originalOpen = window.open;
-				window.open = function(url, target, features) {
-					// Check if it's an image (common image extensions)
-					var imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.svg'];
-					var isImage = imageExtensions.some(function(ext) {
-						return url.toLowerCase().includes(ext);
-					});
-					
-					if (isImage && (!target || target === '_blank')) {
-						// Open image in popup instead of new tab
-						openImagePopup(url, '', '');
-						return null; // Prevent default window opening
+
+				loading.style.display = 'block';
+
+				popup.classList.add('active');
+
+				document.body.style.overflow = 'hidden';
+
+				frame.src = 'about:blank';
+
+				setTimeout(function() {
+					frame.src = url;
+				}, 30);
+
+			};
+
+
+			/* CLOSE POPUP */
+
+			window.closeHotspotPopup = function() {
+
+				popup.classList.remove('active');
+
+				frame.src = 'about:blank';
+
+				loading.style.display = 'block';
+
+				document.body.style.overflow = '';
+
+			};
+
+
+			/* FRAME LOADING */
+
+			frame.addEventListener('load', function() {
+				loading.style.display = 'none';
+			});
+
+
+			/* CLOSE BUTTON */
+
+			closeButton.addEventListener('click', function(e) {
+
+				e.preventDefault();
+				e.stopPropagation();
+
+				window.closeHotspotPopup();
+
+			});
+
+
+			/* CLICK OUTSIDE POPUP */
+
+			popup.addEventListener('click', function(e) {
+
+				if (e.target === popup) {
+					window.closeHotspotPopup();
+				}
+
+			});
+
+
+			/* ==========================================
+			   INTERCEPT WINDOW.OPEN
+			========================================== */
+
+			var originalWindowOpen = window.open;
+
+			window.open = function(url, target, features) {
+
+				if (url && url !== 'about:blank') {
+
+					if (!target || target === '_blank' || target === '_new') {
+
+						window.openHotspotPopup(url);
+
+						return frame.contentWindow;
+
 					}
-					
-					// For non-images, use original behavior
-					return originalOpen.apply(window, arguments);
-				};
-				
-				// Return close function for global access
-				return closeImagePopup;
-			}
-			
-			if (window.addEventListener) {
-				window.addEventListener("load", hideUrlBar);
-				window.addEventListener("resize", hideUrlBar);
-				window.addEventListener("orientationchange", hideUrlBar);
-				window.addEventListener("load", initPopup);
-			}
-	
-		</script>
-	</head>
-	<body>
-		<!-- Welcome Screen Overlay -->
-		<div id="welcome-overlay" aria-labelledby="welcome-title" role="dialog" aria-modal="true">
-			<div class="welcome-container">
-				<div class="close-btn" onclick="closeWelcomeScreen()" aria-label="Close welcome screen" tabindex="0" role="button">×</div>
-				
-				<div class="welcome-header">
-					<h1 id="welcome-title">Welcome to<br>Amaris Grace Bay<br>LXR Hotels & Resorts</h1>
-					<span class="brand-subtitle">Virtual Property Tour</span>
-					
-					<ul class="instructions-list">
-						<li>Drag to rotate the building up/down and side-to-side</li>
-						<li>Click on apartments to view details</li>
-						<li>Use mouse wheel or pinch to zoom</li>
-					</ul>
-				</div>
-				
-				<button id="start-tour-btn" onclick="closeWelcomeScreen()" aria-label="Start the virtual tour">
-					Start Exploring
-				</button>
+				}
+
+				return originalWindowOpen.apply(window, arguments);
+
+			};
+
+
+			/* ==========================================
+			   INTERCEPT DIRECT HOTSPOT LINKS
+			========================================== */
+
+			document.addEventListener('click', function(e) {
+
+				var element = e.target;
+
+				while (element && element.tagName !== 'A') {
+					element = element.parentElement;
+				}
+
+				if (!element) return;
+
+				var href = element.getAttribute('href');
+				var target = element.getAttribute('target');
+
+				if (!href || href === '#' || href.indexOf('javascript:') === 0) {
+					return;
+				}
+
+				if (target === '_blank' || target === '_new') {
+
+					e.preventDefault();
+					e.stopPropagation();
+
+					window.openHotspotPopup(element.href);
+
+				}
+
+			}, true);
+
+
+			/* INTERCEPT MIDDLE-CLICK */
+
+			document.addEventListener('auxclick', function(e) {
+
+				var element = e.target;
+
+				while (element && element.tagName !== 'A') {
+					element = element.parentElement;
+				}
+
+				if (element && (element.target === '_blank' || element.target === '_new')) {
+
+					e.preventDefault();
+					e.stopPropagation();
+
+					window.openHotspotPopup(element.href);
+
+				}
+
+			}, true);
+
+		}
+
+
+		/* ==========================================
+		   INITIALIZATION
+		========================================== */
+
+		if (window.addEventListener) {
+
+			window.addEventListener("load", function() {
+				hideUrlBar();
+				initHotspotPopup();
+			});
+
+			window.addEventListener("resize", hideUrlBar);
+			window.addEventListener("orientationchange", hideUrlBar);
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+
+	<!-- ==========================================
+	     WELCOME SCREEN
+	========================================== -->
+
+	<div id="welcome-overlay" aria-labelledby="welcome-title" role="dialog" aria-modal="true">
+
+		<div class="welcome-container">
+
+			<div class="close-btn"
+				onclick="closeWelcomeScreen()"
+				aria-label="Close welcome screen"
+				tabindex="0"
+				role="button">×</div>
+
+			<div class="welcome-header">
+
+				<h1 id="welcome-title">
+					Welcome to<br>
+					Amaris Grace Bay<br>
+					LXR Hotels & Resorts
+				</h1>
+
+				<span class="brand-subtitle">Virtual Property Tour</span>
+
+				<ul class="instructions-list">
+					<li>Drag to rotate the building up/down and side-to-side</li>
+					<li>Click on apartments to view details</li>
+					<li>Use mouse wheel or pinch to zoom</li>
+				</ul>
+
 			</div>
+
+			<button id="start-tour-btn"
+				onclick="closeWelcomeScreen()"
+				aria-label="Start the virtual tour">
+				Start Exploring
+			</button>
+
 		</div>
-		
-		<script type="text/javascript" src="object2vr_player.js">
-		</script>
-		<script type="text/javascript" src="skin.js">
-		</script>
-		<div id="container" style="width:100%;height:100%;" tabindex="-1">
+
+	</div>
+
+
+	<!-- ==========================================
+	     OBJECT2VR PLAYER
+	========================================== -->
+
+	<script type="text/javascript" src="object2vr_player.js"></script>
+
+	<script type="text/javascript" src="skin.js"></script>
+
+	<div id="container" style="width:100%;height:100%;" tabindex="-1">
 		This content requires HTML5 &amp; Javascript or Adobe Flash Player Version 9 or higher.
-		</div>
-		<script type="text/javascript">
-	
-			// create the object player with the container
-			obj=new object2vrPlayer("container");
-			// add the skin object
-			skin=new object2vrSkin(obj);
-			// load the configuration
-			obj.readConfigUrl("GraceBay.xml");
-			// hide the URL bar on the iPhone
-			setTimeout(function() { hideUrlBar(); }, 10);
-			
-			// Add keyboard support
-			document.addEventListener('keydown', function(event) {
-				if (event.key === 'Escape') {
-					closeWelcomeScreen();
-					// Also try to close image popup if it exists
-					var popup = document.getElementById('imagePopup');
-					if (popup && popup.style.display === 'flex') {
-						popup.style.display = 'none';
-						document.body.style.overflow = '';
-					}
+	</div>
+
+
+	<script type="text/javascript">
+
+		/* CREATE OBJECT2VR PLAYER */
+
+		obj = new object2vrPlayer("container");
+
+		/* ADD SKIN */
+
+		skin = new object2vrSkin(obj);
+
+		/* LOAD CONFIGURATION */
+
+		obj.readConfigUrl("GraceBay.xml");
+
+		/* HIDE URL BAR ON IPHONE */
+
+		setTimeout(function() {
+			hideUrlBar();
+		}, 10);
+
+
+		/* ==========================================
+		   KEYBOARD SUPPORT
+		========================================== */
+
+		document.addEventListener('keydown', function(event) {
+
+			if (event.key === 'Escape') {
+
+				closeWelcomeScreen();
+
+				if (typeof window.closeHotspotPopup === 'function') {
+					window.closeHotspotPopup();
 				}
-			});
-			
-			// Close welcome screen if user clicks outside
-			document.getElementById('welcome-overlay').addEventListener('click', function(event) {
-				if (event.target === this) {
+
+			}
+
+		});
+
+
+		/* CLOSE WELCOME SCREEN BY CLICKING OUTSIDE */
+
+		document.getElementById('welcome-overlay').addEventListener('click', function(event) {
+
+			if (event.target === this) {
+				closeWelcomeScreen();
+			}
+
+		});
+
+
+		/* KEYBOARD ACCESSIBILITY */
+
+		document.querySelectorAll('.close-btn, #start-tour-btn').forEach(function(element) {
+
+			element.addEventListener('keydown', function(event) {
+
+				if (event.key === 'Enter' || event.key === ' ') {
+
+					event.preventDefault();
 					closeWelcomeScreen();
+
 				}
+
 			});
-			
-			// Make buttons focusable and handle Enter key
-			document.querySelectorAll('.close-btn, #start-tour-btn, .popup-close').forEach(function(element) {
-				element.addEventListener('keydown', function(event) {
-					if (event.key === 'Enter' || event.key === ' ') {
-						event.preventDefault();
-						if (this.classList.contains('popup-close')) {
-							var popup = document.getElementById('imagePopup');
-							if (popup) popup.style.display = 'none';
-						} else {
-							closeWelcomeScreen();
-						}
-					}
-				});
-			});
-			
-		</script>
-		<noscript>
-			<p><b>Please enable Javascript!</b></p>
-		</noscript>
-	</body>
+
+		});
+
+	</script>
+
+
+	<noscript>
+		<p><b>Please enable Javascript!</b></p>
+	</noscript>
+
+</body>
 </html>
