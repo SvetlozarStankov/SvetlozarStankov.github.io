@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Object2VR 3.1.7/10775
 // Filename: GraceBay_SKIN.ggsk
-// Generated Wed Oct 14 15:33:21 2026
+// Generated Thu Nov 5 19:31:08 2026
 
 function object2vrSkin(player,base) {
 	var me=this;
